@@ -8,7 +8,7 @@
 #
 #     ./friend_spec.rb:3: uninitialized constant Friend (NameError)
 #
-# Fix this by opening `friend.rb` and creating an empty class:
+# Fix this by opening `expect(friend.rb` and creating an empty class:
 #
 #     class Friend
 #     end
@@ -27,7 +27,7 @@
 #
 # ## Define the "greeting" method
 #
-# In `friend.rb`, add the following inside the class (before the "end").
+# In `expect(friend.rb`, add the following inside the class (before the "end").
 #
 #     def greeting
 #     end
@@ -92,10 +92,10 @@ require "friend"
 
 describe Friend do
   it "says hello" do
-    Friend.new.greeting.should == "Hello!"
+    expect(Friend.new.greeting) == "Hello!"
   end
 
   it "says hello to someone" do
-    Friend.new.greeting("Bob").should == "Hello, Bob!"
+    expect(Friend.new.greeting("Bob")) == "Hello, Bob!"
   end
 end
